@@ -39,6 +39,9 @@
                 <li role="presentation"{% if page_id == 'formula-versions' %} class="active"{% endif %}>
                     <a href="{% url 'ui:blueprint-formula-versions' pk=blueprint.id %}">Formula Versions</a>
                 </li>
+                <li role="presentation">
+                  <a href="{% url 'api:blueprint-export}' pk=blueprint.id %}">Raw View</a>
+                </li>
                 {% if has_admin %}
                 <li role="presentation"{% if page_id == 'permissions' %} class="active"{% endif %}>
                     <a href="{% url 'ui:blueprint-object-permissions' pk=blueprint.id %}">Permissions</a>
